@@ -666,7 +666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 159634025}
-  _panSpeed: 20
+  _panSpeed: 5
   _zoomSpeed: 50
   _referenceCamera: {fileID: 234181019}
 --- !u!81 &234181017
@@ -721,11 +721,11 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 1
+  m_HDR: 0
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
-  m_OcclusionCulling: 0
+  m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
 --- !u!114 &234181020
@@ -1892,32 +1892,32 @@ PrefabInstance:
     - target: {fileID: 3303564093599392808, guid: e84692160169c32498be1fe38a6d4c66,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3303564093599392808, guid: e84692160169c32498be1fe38a6d4c66,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3303564093599392808, guid: e84692160169c32498be1fe38a6d4c66,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 127.5
       objectReference: {fileID: 0}
     - target: {fileID: 3303564093599392808, guid: e84692160169c32498be1fe38a6d4c66,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -45.5
       objectReference: {fileID: 0}
     - target: {fileID: 3303564093599392808, guid: e84692160169c32498be1fe38a6d4c66,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 231
       objectReference: {fileID: 0}
     - target: {fileID: 3303564093599392808, guid: e84692160169c32498be1fe38a6d4c66,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 3303768423913194942, guid: e84692160169c32498be1fe38a6d4c66,
         type: 3}
@@ -2057,32 +2057,37 @@ PrefabInstance:
     - target: {fileID: 3304367985821187072, guid: e84692160169c32498be1fe38a6d4c66,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3304367985821187072, guid: e84692160169c32498be1fe38a6d4c66,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3304367985821187072, guid: e84692160169c32498be1fe38a6d4c66,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3304422710767564832, guid: e84692160169c32498be1fe38a6d4c66,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3304422710767564832, guid: e84692160169c32498be1fe38a6d4c66,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3369056542330881944, guid: e84692160169c32498be1fe38a6d4c66,
         type: 3}
       propertyPath: m_Name
       value: ReloadMapCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3369216616385312984, guid: e84692160169c32498be1fe38a6d4c66,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e84692160169c32498be1fe38a6d4c66, type: 3}
