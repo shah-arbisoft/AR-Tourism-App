@@ -44,7 +44,11 @@ The following packages were added:
   com.unity.timeline@1.2.17
   com.unity.ugui@1.0.0
 
+<<<<<<< HEAD
 === Tue Dec  8 20:18:24 2020
+=======
+=== Sat Dec  5 23:02:27 2020
+>>>>>>> parent of c2cc206... Revert "input search box size adjusted"
 
 Packages were changed.
 Update Mode: updateDependencies
