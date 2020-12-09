@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":534.598388671875,"y":653.9765014648438,"z":-785.2006225585938},"rotation":{"x":0.13000912964344026,"y":-0.08022486418485642,"z":0.010554347187280655,"w":0.9882069826126099},"size":26.50131607055664,"orthographic":false}
-=======
-﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":832.45703125,"y":665.3713989257813,"z":-393.5181579589844},"rotation":{"x":0.10660093277692795,"y":0.010435217060148716,"z":-0.0011190264485776425,"w":0.9942483901977539},"size":22.02000617980957,"orthographic":false}
->>>>>>> parent of c2cc206... Revert "input search box size adjusted"
