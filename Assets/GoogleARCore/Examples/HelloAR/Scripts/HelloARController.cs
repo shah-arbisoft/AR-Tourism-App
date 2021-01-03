@@ -21,36 +21,45 @@
 namespace GoogleARCore.Examples.HelloAR
 {
     using System.Collections.Generic;
+    using System.Collections;
     using GoogleARCore;
     using GoogleARCore.Examples.Common;
     using UnityEngine;
     using UnityEngine.EventSystems;
 
-#if UNITY_EDITOR
+/*#if UNITY_EDITOR
     // Set up touch input propagation while using Instant Preview in the editor.
     using Input = InstantPreviewInput;
-#endif
+#endif*/
 
     /// <summary>
     /// Controls the HelloAR example.
     /// </summary>
     public class HelloARController : MonoBehaviour
     {
+        string msg = "initializing...";
+        void OnGUI()
+        {
+            GUI.skin.label.fontSize = 100;
+            GUI.Label(new Rect(100, 200, 1000, 1000), msg);
+            GUI.backgroundColor=Color.black;
+           
+        }
         /// <summary>
         /// The Depth Setting Menu.
         /// </summary>
-        public DepthMenu DepthMenu;
+       // public DepthMenu DepthMenu;
 
         /// <summary>
         /// The Instant Placement Setting Menu.
         /// </summary>
-        public InstantPlacementMenu InstantPlacementMenu;
+        //public InstantPlacementMenu InstantPlacementMenu;
 
         /// <summary>
         /// A prefab to place when an instant placement raycast from a user touch hits an instant
         /// placement point.
         /// </summary>
-        public GameObject InstantPlacementPrefab;
+        //public GameObject InstantPlacementPrefab;
 
         /// <summary>
         /// The first-person camera being used to render the passthrough camera image (i.e. AR
@@ -61,12 +70,12 @@ namespace GoogleARCore.Examples.HelloAR
         /// <summary>
         /// A prefab to place when a raycast from a user touch hits a vertical plane.
         /// </summary>
-        public GameObject GameObjectVerticalPlanePrefab;
+        //public GameObject GameObjectVerticalPlanePrefab;
 
         /// <summary>
         /// A prefab to place when a raycast from a user touch hits a horizontal plane.
         /// </summary>
-        public GameObject GameObjectHorizontalPlanePrefab;
+       // public GameObject GameObjectHorizontalPlanePrefab;
 
         /// <summary>
         /// A prefab to place when a raycast from a user touch hits a feature point.
@@ -76,7 +85,7 @@ namespace GoogleARCore.Examples.HelloAR
         /// <summary>
         /// The rotation in degrees need to apply to prefab when it is placed.
         /// </summary>
-        private const float _prefabRotation = 180.0f;
+        //private const float _prefabRotation = 180.0f;
 
         /// <summary>
         /// True if the app is in the process of quitting due to an ARCore connection error,
@@ -94,11 +103,168 @@ namespace GoogleARCore.Examples.HelloAR
             Application.targetFrameRate = 60;
         }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //=============================================
+        GameObject prefab;
+        GameObject gameObject;
+
+        bool check = false;
+        private void Start()
+        {
+            Input.location.Start(2, 0);
+            Input.compass.enabled = true;
+            prefab = GameObjectPointPrefab;
+            gameObject = Instantiate(prefab);
+            gameObject.SetActive(false);
+            /*            TrackableHit hit;*/
+
+
+            //        gameObject.transform.localScale += new Vector3(20, 20, 20);
+
+
+
+        }
+        //=============================================
+
+
+        // every 2 seconds perform the print()
+        /*private IEnumerator WaitForFirst(float waitTime)
+        {
+            yield return new WaitForSeconds(waitTime);
+            check = true;
+              
+            
+        }
+*/
+
+
         /// <summary>
         /// The Unity Update() method.
         /// </summary>
+        /// 
+        /// // creeate local static variable to tackle this new problem
+        /*float checkk(float x)
+        {
+            if (x > 1.0f)
+            {
+
+                x =1- (x % 1.0f);
+            }
+            if (x < -1.0f)
+            {
+                x = -1+ (x % 1.0f);
+            }
+            return x;
+            
+        }*/
+        /* private IEnumerator coroutine;*/
         public void Update()
         {
+            msg = "        " + (int)Input.compass.trueHeading;
+            gameObject.SetActive(true);
+
+            /*       msg += "\n camera position:  " + Camera.main.transform.position;
+                   msg += "\n game position:  " + Camera.main.transform.position;*/
+
+            int trueNorth = (int)Input.compass.trueHeading;
+            /*if ( check==false)
+            {
+                coroutine = WaitForFirst(1.0f);
+                StartCoroutine(coroutine);
+            }*/
+            /*msg += "\n camera rotation:  " + Camera.main.transform.rotation;
+            msg += "\n game rotation:  " + gameObject.transform.rotation;
+*/
+
+            if (Input.deviceOrientation == DeviceOrientation.FaceUp && check == false)
+            {
+
+
+                gameObject.transform.position = FirstPersonCamera.transform.position;
+                gameObject.transform.eulerAngles = new Vector3(0.0f,FirstPersonCamera.transform.eulerAngles.y,0.0f);
+                
+
+
+                check = true;
+
+
+                //gameObject.transform.rotation = Quaternion.Euler(0.0f, -(float)trueNorth, 0.0f);
+                gameObject.transform.Rotate(0.0f, -(float)trueNorth, 0.0f, Space.Self);
+
+
+            }
+          /*  if (check)
+            {
+                msg += "\n updated yes";
+            }
+            else
+            {
+                msg += "\n Not Updated";
+            }*/
+            
+
+
+
+
+            if (Input.deviceOrientation == DeviceOrientation.Portrait)
+            {
+               
+                    
+                check = false;
+            }
+
+            /*if ((trueNorth >=175 && trueNorth <= 185) && check==false)
+            {
+                check = true;
+
+                Vector3 cc = Camera.main.transform.forward;
+                cc.y = 0;
+                gameObject.transform.position = Camera.main.transform.position + cc*4.0f;
+
+
+
+                cc.x += 1.0f;
+
+
+                cc.x = checkk(cc.x);
+
+                cc.z = checkk(cc.x-1);
+
+                gameObject1.transform.position = Camera.main.transform.position + cc * 4.0f;
+
+                //gameObject.transform.position = Camera.main.transform.position + new Vector3(0,5.0f,5.0f);
+
+
+                gameObject.SetActive(true);
+                gameObject1.SetActive(true);
+
+
+            }*/
+
+
+
+
+
+
+
+
+
+
+
+
+
             // To use Recording API:
             // 1. Create an instance of ARCoreRecordingConfig. The Mp4DatasetFilepath needs to
             // be accessible by the app, e.g. Application.persistentDataPath, or you can request
@@ -118,7 +284,7 @@ namespace GoogleARCore.Examples.HelloAR
             UpdateApplicationLifecycle();
 
             // If the player has not touched the screen, we are done with this update.
-            Touch touch;
+           /* Touch touch;
             if (Input.touchCount < 1 || (touch = Input.GetTouch(0)).phase != TouchPhase.Began)
             {
                 return;
@@ -192,6 +358,7 @@ namespace GoogleARCore.Examples.HelloAR
                     }
 
                     // Instantiate prefab at the hit pose.
+
                     var gameObject = Instantiate(prefab, hit.Pose.position, hit.Pose.rotation);
 
                     // Compensate for the hitPose rotation facing away from the raycast (i.e.
@@ -212,7 +379,7 @@ namespace GoogleARCore.Examples.HelloAR
                             .InitializeWithTrackable(hit.Trackable);
                     }
                 }
-            }
+            }*/
         }
 
         /// <summary>
