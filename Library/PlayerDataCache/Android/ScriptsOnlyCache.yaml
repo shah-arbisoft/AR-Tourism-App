@@ -42,7 +42,6 @@ ScriptsOnlyBuild:
     - Mapbox.Unity.MeshGeneration.Modifiers.SpawnInsideModifier
     - Mapbox.Unity.Utilities.DebugTools.SceneData
     - Mapbox.Unity.Utilities.DebugTools.ScenesList
-    - Mapbox.Unity.Utilities.Runnable
     - ScriptablePalette
     - changescene
     Unity.Rider.Editor.dll:
@@ -66,10 +65,8 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Mask
     - UnityEngine.UI.Text
     - UnityEngine.UI.VerticalLayoutGroup
-    com.unity.multiplayer-hlapi.Runtime.dll:
-    - UnityEngine.Networking.NetworkCallbacks
   sceneClasses:
-    Assets/GoogleARCore/Compass/HelloAR/Scenes/HelloAR.unity:
+    Assets/GoogleARCore/Compass/CompassAR/Scenes/CompassAR.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -95,25 +92,21 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11398}
+      Script: {instanceID: 11390}
     - Class: 114
-      Script: {instanceID: 11982}
+      Script: {instanceID: 11960}
     - Class: 114
-      Script: {instanceID: 12450}
+      Script: {instanceID: 12414}
     - Class: 114
-      Script: {instanceID: 12584}
+      Script: {instanceID: 12712}
     - Class: 114
-      Script: {instanceID: 12754}
+      Script: {instanceID: 12838}
     - Class: 114
-      Script: {instanceID: 12882}
+      Script: {instanceID: 13748}
     - Class: 114
-      Script: {instanceID: 13830}
+      Script: {instanceID: 13862}
     - Class: 114
-      Script: {instanceID: 13948}
-    - Class: 114
-      Script: {instanceID: 14520}
-    - Class: 114
-      Script: {instanceID: 15002}
+      Script: {instanceID: 14414}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -166,99 +159,99 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11390}
+      Script: {instanceID: 11388}
     - Class: 114
       Script: {instanceID: 11392}
     - Class: 114
-      Script: {instanceID: 11400}
+      Script: {instanceID: 11394}
     - Class: 114
-      Script: {instanceID: 11432}
+      Script: {instanceID: 11426}
     - Class: 114
-      Script: {instanceID: 11702}
+      Script: {instanceID: 11690}
     - Class: 114
-      Script: {instanceID: 11732}
+      Script: {instanceID: 11720}
     - Class: 114
-      Script: {instanceID: 11864}
+      Script: {instanceID: 11850}
     - Class: 114
-      Script: {instanceID: 11880}
+      Script: {instanceID: 11866}
     - Class: 114
-      Script: {instanceID: 11980}
+      Script: {instanceID: 11958}
     - Class: 114
-      Script: {instanceID: 12030}
+      Script: {instanceID: 12008}
     - Class: 114
-      Script: {instanceID: 12048}
+      Script: {instanceID: 12026}
     - Class: 114
-      Script: {instanceID: 12080}
+      Script: {instanceID: 12056}
     - Class: 114
-      Script: {instanceID: 12156}
+      Script: {instanceID: 12126}
     - Class: 114
-      Script: {instanceID: 12256}
+      Script: {instanceID: 12222}
     - Class: 114
-      Script: {instanceID: 12406}
+      Script: {instanceID: 12370}
     - Class: 114
-      Script: {instanceID: 12420}
+      Script: {instanceID: 12384}
     - Class: 114
-      Script: {instanceID: 12580}
+      Script: {instanceID: 12544}
     - Class: 114
-      Script: {instanceID: 12584}
+      Script: {instanceID: 12548}
     - Class: 114
-      Script: {instanceID: 12658}
+      Script: {instanceID: 12620}
     - Class: 114
-      Script: {instanceID: 12782}
+      Script: {instanceID: 12738}
     - Class: 114
-      Script: {instanceID: 12900}
+      Script: {instanceID: 12854}
     - Class: 114
-      Script: {instanceID: 13014}
+      Script: {instanceID: 12964}
     - Class: 114
-      Script: {instanceID: 13088}
+      Script: {instanceID: 13038}
     - Class: 114
-      Script: {instanceID: 13274}
+      Script: {instanceID: 13218}
     - Class: 114
-      Script: {instanceID: 13338}
+      Script: {instanceID: 13280}
     - Class: 114
-      Script: {instanceID: 13586}
+      Script: {instanceID: 13516}
     - Class: 114
-      Script: {instanceID: 13742}
+      Script: {instanceID: 13664}
     - Class: 114
-      Script: {instanceID: 13912}
+      Script: {instanceID: 13828}
     - Class: 114
-      Script: {instanceID: 13938}
+      Script: {instanceID: 13852}
     - Class: 114
-      Script: {instanceID: 14182}
+      Script: {instanceID: 14090}
     - Class: 114
-      Script: {instanceID: 14226}
+      Script: {instanceID: 14134}
     - Class: 114
-      Script: {instanceID: 14270}
+      Script: {instanceID: 14176}
+    - Class: 114
+      Script: {instanceID: 14184}
+    - Class: 114
+      Script: {instanceID: 14256}
     - Class: 114
       Script: {instanceID: 14280}
     - Class: 114
-      Script: {instanceID: 14354}
+      Script: {instanceID: 14336}
     - Class: 114
-      Script: {instanceID: 14378}
+      Script: {instanceID: 14382}
     - Class: 114
-      Script: {instanceID: 14434}
+      Script: {instanceID: 14394}
     - Class: 114
-      Script: {instanceID: 14488}
+      Script: {instanceID: 14418}
     - Class: 114
-      Script: {instanceID: 14500}
+      Script: {instanceID: 14422}
     - Class: 114
-      Script: {instanceID: 14524}
+      Script: {instanceID: 14606}
     - Class: 114
-      Script: {instanceID: 14528}
+      Script: {instanceID: 14624}
     - Class: 114
-      Script: {instanceID: 14718}
+      Script: {instanceID: 14776}
     - Class: 114
-      Script: {instanceID: 14736}
+      Script: {instanceID: 14816}
     - Class: 114
-      Script: {instanceID: 14892}
+      Script: {instanceID: 14884}
     - Class: 114
-      Script: {instanceID: 14930}
+      Script: {instanceID: 14886}
     - Class: 114
-      Script: {instanceID: 15002}
-    - Class: 114
-      Script: {instanceID: 15004}
-    - Class: 114
-      Script: {instanceID: 15136}
+      Script: {instanceID: 15012}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 119
@@ -300,34 +293,22 @@ ScriptsOnlyBuild:
     className: Slider
   - hash:
       serializedVersion: 2
-      Hash: 5f1752ed2092162f016c19510c28a8b9
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Button
-  - hash:
-      serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: HorizontalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: a63fc1a3b035e5a0b5839cd7f7b3086e
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.EventSystems
-    className: EventTrigger
-  - hash:
-      serializedVersion: 2
-      Hash: eafb77726b67b7571818a7210a3ce11e
-    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
-    namespaceName: UnityEngine.Networking
-    className: NetworkIdentity
-  - hash:
-      serializedVersion: 2
       Hash: d251bf88db6c95a6b1aa0b69298da9ef
     assemblyName: UnityEngine.SpatialTracking.dll
     namespaceName: UnityEngine.SpatialTracking
     className: TrackedPoseDriver
+  - hash:
+      serializedVersion: 2
+      Hash: 5f1752ed2092162f016c19510c28a8b9
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Button
   - hash:
       serializedVersion: 2
       Hash: aeb62f729c52c814dec86c47dcac1471
@@ -490,6 +471,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Scrollbar
+  - hash:
+      serializedVersion: 2
+      Hash: eafb77726b67b7571818a7210a3ce11e
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkIdentity
   - hash:
       serializedVersion: 2
       Hash: b6978e66c5e3e2cb9b5b4f047f01fac3
@@ -1578,6 +1565,12 @@ ScriptsOnlyBuild:
     className: TransformLocationProvider
   - hash:
       serializedVersion: 2
+      Hash: a63fc1a3b035e5a0b5839cd7f7b3086e
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.EventSystems
+    className: EventTrigger
+  - hash:
+      serializedVersion: 2
       Hash: 5dea360fb0b147724ac344e6f399c2f3
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -1663,5 +1656,5 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Mapbox/Examples/2_AstronautGame/AstronautGame.unity
-  - Assets/GoogleARCore/Compass/HelloAR/Scenes/HelloAR.unity
+  - Assets/GoogleARCore/Compass/CompassAR/Scenes/CompassAR.unity
   playerPath: C:/Users/shah/Desktop/compass.apk
