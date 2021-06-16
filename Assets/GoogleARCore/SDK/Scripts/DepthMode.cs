@@ -41,6 +41,7 @@ namespace GoogleARCore
         /// Adds significant computational load.
         /// </summary>
         Automatic = 1,
-  }
+
+    }
 }
 

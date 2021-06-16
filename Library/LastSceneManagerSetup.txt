@@ -1,5 +1,0 @@
-sceneSetups:
-- path: Assets/GoogleARCore/Compass/CompassAR/Scenes/CompassAR.unity
-  isLoaded: 1
-  isActive: 1
-  isSubScene: 0
