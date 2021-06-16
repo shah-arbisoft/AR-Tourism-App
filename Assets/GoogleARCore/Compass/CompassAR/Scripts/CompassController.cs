@@ -1,5 +1,5 @@
 
-namespace GoogleARCore.Compass.HelloAR
+namespace GoogleARCore.Compass.CompassAR
 {
     
     using GoogleARCore;
@@ -16,6 +16,8 @@ namespace GoogleARCore.Compass.HelloAR
     public class CompassController : MonoBehaviour
     {
         string msg = "initializing...";
+        
+        
         void OnGUI()
         {
             GUI.skin.label.fontSize = 100;
@@ -57,16 +59,21 @@ namespace GoogleARCore.Compass.HelloAR
 
 
         //=============================================
-        GameObject prefab;
-        GameObject gameObject;
-
+        
+        GameObject gameObject;  // to hold gameObject
         bool check = false;
-        private void Start()
+
+        // start location services and enable compass
+        private void Start_Compass()
         {
             Input.location.Start(2, 0);
             Input.compass.enabled = true;
-            prefab = GameObjectPointPrefab;
-            gameObject = Instantiate(prefab);
+        }
+
+        private void Start()
+        {
+            Start_Compass();
+            gameObject = Instantiate(GameObjectPointPrefab);
             gameObject.SetActive(false);
         }
 
@@ -78,7 +85,7 @@ namespace GoogleARCore.Compass.HelloAR
         public void Update()
         {
             msg = "        " + (int)Input.compass.trueHeading;
-            gameObject.SetActive(true);
+            
 
       
             int trueNorth = (int)Input.compass.trueHeading;
@@ -87,14 +94,10 @@ namespace GoogleARCore.Compass.HelloAR
             if (Input.deviceOrientation == DeviceOrientation.FaceUp && check == false)
             {
 
-
+                gameObject.SetActive(true);
                 gameObject.transform.position = FirstPersonCamera.transform.position;
                 gameObject.transform.eulerAngles = new Vector3(0.0f,FirstPersonCamera.transform.eulerAngles.y,0.0f);
-                
-
-
                 check = true;
-
 
                 //gameObject.transform.rotation = Quaternion.Euler(0.0f, -(float)trueNorth, 0.0f);
                 gameObject.transform.Rotate(0.0f, -(float)trueNorth, 0.0f, Space.Self);
